@@ -1,0 +1,41 @@
+1. How would you define machine learning: 
+The process by which a machine creates the routines to solve a task without 
+direct coding of the algorithm. 
+
+2. Can you name four types of problems where it shines: 
+Problems with no known algorithms
+Problems with extremely large data sets
+Problems where the code needs to by dynamics sudden changes in information
+Problems where trends or solutions change drastically
+
+3. What is a labeled training set:
+A labeled training set is a data set that includes the features to be studied
+(i.e, the data collected) as well as the expected output that thw ML algo should 
+produces. These expected outputs are usually applied by hand.
+
+4. What are the two most common supervised task: 
+Image recognition and linear regression 
+
+5. Can you name for common unsupervised tasks: 
+clustering, anomaly, dimension reduction, rule learning. 
+
+6. What type of Machine Learn algo would you use to allow a robot to walk 
+in various unknown terrains?
+unsupervised, reinfoircement learning (online)
+
+7. What type of algorithm would you use to segment your customers into multiple groups? 
+clustering
+
+8. Would you frame the problem of spam detection as supervised or unsupervised?
+Initially this would be supervised as people had to mark spam messages. As the algorithm gets better 
+it can be adapted to unsupervised/semi-supervised where new labels are input as needed.
+
+9. What is an online learning system? 
+Online learning is when a ML algo is able to actively adapt to data that is 
+produced in production enviornment
+
+10. What is out of core learning?
+When an online learning algorithm is trained offline on a large data set that cannot fit on one machine's memory
+(seems independet of the type of algorithm, more focused on size of data and training location)
+
+11.
