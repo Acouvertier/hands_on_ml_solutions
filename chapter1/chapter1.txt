@@ -38,4 +38,49 @@ produced in production enviornment
 When an online learning algorithm is trained offline on a large data set that cannot fit on one machine's memory
 (seems independet of the type of algorithm, more focused on size of data and training location)
 
-11.
+11.What type of learning algorithm relies on a similarity measure to make predictions?
+Instance-based models learn the training set by heart and use the similarity between the learned data and a new data to make predictions
+
+12. What is the difference between a model parameter and a learning algorithm hyperparameter?
+A model parameter is the value of the model that is optimized to best predict the value of the training set. 
+By comparsion a learning algorithm hyperparameter is a regularization that is applied to a parameter in the model. 
+In the text the model parameter could be the slope of a linear model, and the hyperparametr was a regularization to limit 
+the range of the allowed slopes of the final fitted model.
+
+13. What do model-based learning algorithms search for? What is the most common strategy they use to succeed? How do they make predicitions?
+Model-based learning algorithms search for the optimal model parameters to best fit the training data
+with respect to some cost or utility function. This is ultimately to search for the underlying trends of the data
+which the most common strategy involves optimizing with respect to a cost/utility function. Once tuned, 
+the models make predictions by taking in the features and performing a computation to return an estimated output.
+
+14. Can you name four of the main challenges in Machine Learning?
+The challenges occur in two subsets: bad data and bad models. With respect to data, there could be sample bias (1),
+where the training data has a skew based on the collection method. Furthermore their could insufficient quantity relative to the
+complexity of the model/problem (2). The book references that even simple problems require thousands of examples. Lastly, there
+could be poor-quality data (3), this refers to including features that are irrelevant or using a data set with missing features, or features 
+that may be entered erroneously. For the models, the two main issues are overfitting (4) and underfitting (5), which both refer to
+how the model is trained on the data set. In short a model trained well on the training set may not generalize.
+
+15. If your model performs great on the training data but generalizes poorly to new instances, what is happening? Can you name three posible solutions?
+In this case, the model is said to overfitting. Some solutions include: (1) reducing the complexity of the model (new model, or regularization),
+(2) gather more data to make the true trends more apparent, (3) clean existing data to remove noise
+
+16. What is a test set, and why would you want to use it?
+A test set is a subset of the total data set that is used to further verify a model after it is trained on the 
+training set. This can be used to compare the effectiveness of different model types to generalize to new data.
+
+17. What is the purpose of a validation set?
+A validation set is a different subset of the total data set that is used to compare different hyperparameters for the same model 
+that have been trained on the same training set. Similar to a test set in this way, you can test for
+how well each model generalizes. Once the best is identified it is trained again including the validation set and 
+finally tested on the test set. 
+
+18. What is a train-dev set, when do you need it, and how do you use it?
+A train-dev set is subset of the total data set that is representative of the data to be seen in production.
+This is useful when you only have a small amount of representative data and access to a large set of 
+simulated data. The train-dev set is used after a model is trained on the remaining data to test whether it
+is overfitting or underfitting due to the data mismatch (between simulated and real data)
+
+19. What can go wrong if you tune hyperparameters using the test set?
+In this case, the 'optimal' model that is found will be the one that most overfits the training AND test sets.
+This prevents it from generalizing to new cases, nullifying the reason for a test set.
